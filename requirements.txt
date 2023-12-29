@@ -1,4 +1,7 @@
 Flask
 python-dotenv      
+nltk
+gensim
+wordcloud
 
 
