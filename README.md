@@ -16,5 +16,15 @@ X-Analyze is a Flask-based web application designed to analyze Twitter user prof
 - **API:** Custom Twitter API integration
 - **Deployment:** Koyeb
 
+## Steps to Run
+1. Clone Github Repository : `git clone  https://github.com/safi50/XAnalyze.git`
+2. Install Dependencies : `pip install -r requirements.txt`
+3. To Run Locally : `python app.py`
+4. To Build and Run on Docker :
+       ```
+   docker build -t xanalyze .
+   docker run -p 8000:8000 xanalyze     
+   ```
+
 ## Author
 - Syed Safi Ullah Shah - github.com/safi50
