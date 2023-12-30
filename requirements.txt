@@ -3,5 +3,4 @@ python-dotenv
 nltk
 gensim
 wordcloud
-
-
+tweety-ns

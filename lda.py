@@ -9,29 +9,28 @@ from tweety.exceptions_ import UserNotFound
 from gensim import corpora
 from gensim.models.ldamodel import LdaModel
 from wordcloud import WordCloud
-import matplotlib.pyplot as plt
 
 
 # Ensure NLTK data is downloaded
 # nltk.download('stopwords')
 # nltk.download('wordnet')
 
-# def SignIn():
-#     app = Twitter("session")
-#     app.sign_in("x_analyze", "YY3nSOYJIzVRZy9A5b5o")
-#     return app
-
-load_dotenv() # Load environment variables
-
 def SignIn():
-    twitter_username = os.environ.get('TWITTER_USERNAME')
-    twitter_password = os.environ.get('TWITTER_PASSWORD')
-    print(twitter_username, twitter_password)
-    if not twitter_username or not twitter_password:
-        raise ValueError("Twitter credentials are not set in the environment variables.")
     app = Twitter("session")
-    app.sign_in(twitter_username, twitter_password)
+    app.sign_in("x_analyze", "YY3nSOYJIzVRZy9A5b5o")
     return app
+
+# load_dotenv() # Load environment variables
+
+# def SignIn():
+#     twitter_username = os.environ.get('TWITTER_USERNAME')
+#     twitter_password = os.environ.get('TWITTER_PASSWORD')
+#     print(twitter_username, twitter_password)
+#     if not twitter_username or not twitter_password:
+#         raise ValueError("Twitter credentials are not set in the environment variables.")
+#     app = Twitter("session")
+#     app.sign_in(twitter_username, twitter_password)
+#     return app
 
     
 def get_tweets(app, username):
@@ -92,7 +91,3 @@ def gen_wordclouds(lda_model, num_topics):
         wordcloud.generate_from_frequencies(topic_terms)
         wordcloud.to_file(f'static/wordcloud_topic_{t+1}.png')  # Save as static file
 
-
-
-if __name__ == '__main__':
-    SignIn()

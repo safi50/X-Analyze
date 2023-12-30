@@ -1,8 +1,8 @@
 from flask import Flask, request, jsonify, render_template
 from lda import SignIn, get_tweets,get_user_details, get_topics, gen_wordclouds
-from dotenv import load_dotenv
+# from dotenv import load_dotenv
 
-load_dotenv() # Load environment variables
+# load_dotenv() # Load environment variables
 app = Flask(__name__)
 
 @app.route('/')
@@ -25,7 +25,3 @@ def analyze():
     
     wordcloud_path = 'static/wordcloud_topic_1.png'
     return render_template('index.html', wordcloud_path=wordcloud_path, user_details=user)
-
-
-
-
