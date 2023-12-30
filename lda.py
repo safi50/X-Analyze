@@ -13,8 +13,8 @@ from wordcloud import WordCloud
 
 
 # Ensure NLTK data is downloaded
-nltk.download('stopwords')
-nltk.download('wordnet')
+# nltk.download('stopwords')
+# nltk.download('wordnet')
 
 def SignIn():
     app = Twitter("session")
