@@ -25,3 +25,7 @@ def analyze():
     
     wordcloud_path = 'static/wordcloud_topic_1.png'
     return render_template('index.html', wordcloud_path=wordcloud_path, user_details=user)
+
+
+if __name__ == "__main__":
+    app.run(host='0.0.0.0', port=5000)

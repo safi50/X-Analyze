@@ -1,6 +1,7 @@
 import re
 import os
 from dotenv import load_dotenv
+import nltk
 from nltk.corpus import stopwords
 from nltk.stem.porter import PorterStemmer
 from nltk.tokenize import RegexpTokenizer
@@ -12,8 +13,8 @@ from wordcloud import WordCloud
 
 
 # Ensure NLTK data is downloaded
-# nltk.download('stopwords')
-# nltk.download('wordnet')
+nltk.download('stopwords')
+nltk.download('wordnet')
 
 def SignIn():
     app = Twitter("session")
