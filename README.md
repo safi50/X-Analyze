@@ -21,7 +21,7 @@ X-Analyze is a Flask-based web application designed to analyze Twitter user prof
 2. Install Dependencies : `pip install -r requirements.txt`
 3. To Run Locally : `python app.py`
 4. To Build and Run on Docker :
-       ```
+   ```
    docker build -t xanalyze .
    docker run -p 8000:8000 xanalyze     
    ```
