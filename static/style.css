@@ -51,7 +51,7 @@ h2 {
   margin: 5px;
   padding: 13px;
   font-family: "Inconsolata", monospace;
-  width: 250px; /* Adjust the width as needed */
+  width: 250px; 
 }
 
 .input-container button {
@@ -60,7 +60,7 @@ h2 {
   font-family: "Inconsolata", monospace;
 }
 
-/* Style for word clouds container */
+
 #wordclouds-container {
   text-align: center;
   margin-top: 30px;
@@ -71,35 +71,35 @@ h2 {
 }
 
 .wordclouds-container img {
-  margin-top: 10px; /* Adjust the margin as needed */
+  margin-top: 10px; 
   display: block;
   margin-left: auto;
   margin-right: auto;
   max-width: 100%;
 }
 .user-details-container {
-  display: flex; /* Use flexbox */
-  justify-content: center; /* Center items horizontally */
-  align-items: center; /* Center items vertically */
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
   margin-bottom: 20px;
   color: white;
 }
 
 .user-details-container h3 {
-  color: #FFD700; /* Gold color for headings */
-  margin-right: 20px; /* Space between heading and details */
+  color: #FFD700; 
+  margin-right: 20px; 
 }
 
 .user-details-container span {
-  display: flex; /* Use flexbox for the details */
-  justify-content: space-around; /* Space out the details */
-  width: 50%; /* Adjust the width as needed */
+  display: flex; 
+  justify-content: space-around; 
+  width: 50%; 
 }
 
 .user-details-container p {
   color: #FFFFFF;
   font-size: 1.2em;
-  margin: 5px; /* Adjust margin as needed */
+  margin: 5px; 
 }
 
 .error-message {
@@ -129,7 +129,7 @@ h2 {
   100% { transform: rotate(360deg); }
 }
 
-/* Flexbox adjustments for smaller screens */
+
 @media (max-width: 768px) {
   .input-container,
   .user-details-container span {
@@ -139,44 +139,43 @@ h2 {
 
   .input-container input,
   .input-container button {
-    width: 90%; /* Adjust the width on small screens */
-    margin: 5px auto; /* Center elements */
+    width: 90%; 
+    margin: 5px auto; 
   }
 
   .user-details-container,
   .user-details-container h3,
   .user-details-container p {
-    font-size: 1em; /* Adjust font size for small screens */
+    font-size: 1em; 
   }
 
   .loading-container {
-    height: 50vh; /* Reduce height of loading container on smaller screens */
+    height: 50vh; 
   }
 
   .loader {
-    width: 60px; /* Reduce loader size */
+    width: 60px; 
     height: 60px;
   }
 }
 
-/* Style adjustments for mobile devices */
+
 @media (max-width: 480px) {
   h1 {
-    font-size: 2em; /* Reduce font size for very small screens */
+    font-size: 2em; 
   }
 
   h2 {
     font-size: 1.2em;
   }
 
-  /* Further adjustments for input and button */
+  
   .input-container input,
   .input-container button {
-    padding: 10px; /* Adjust padding for better touch accessibility */
+    padding: 10px; 
   }
 }
 
-/* Ensure images are not larger than their container */
 img {
   max-width: 100%;
   height: auto;

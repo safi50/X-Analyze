@@ -1,19 +1,17 @@
 from flask import Flask, request, jsonify, render_template
 from lda import SignIn, get_tweets,get_user_details, get_topics, gen_wordclouds
-# from dotenv import load_dotenv
 
-# load_dotenv() # Load environment variables
 app = Flask(__name__)
 
 @app.route('/')
 def home():
-    return render_template('index.html', wordcloud_path=None)  # Pass None initially
+    return render_template('index.html', wordcloud_path=None)  
 
 @app.route('/analyze', methods=['POST'])
 def analyze():
     username = request.form['username']
-    twitter_app = SignIn()  # Avoid using the same name 'app' as it shadows the Flask 'app'
-    user = get_user_details(twitter_app, username)  # Retrieve user details
+    twitter_app = SignIn() 
+    user = get_user_details(twitter_app, username) 
 
     if user is None:
         error_message = "The User Account wasn't Found"

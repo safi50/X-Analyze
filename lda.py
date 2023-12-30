@@ -1,6 +1,5 @@
 import re
 import os
-from dotenv import load_dotenv
 import nltk
 from nltk.corpus import stopwords
 from nltk.stem.porter import PorterStemmer
@@ -60,21 +59,16 @@ def processTweet(tweet):
     en_stopwords.update(['rt', 'via'])  
     tweet = tweet.lower()
 
-    # Remove URLs
+    # Removing URLs
     tweet = re.sub(r'http\S+|www\S+|https\S+', '', tweet, flags=re.MULTILINE)
-
-    # Remove user @ mentions and hashtags
+    # Removing user @ mentions and hashtags
     tweet = re.sub(r'@\w+|#\w+', '', tweet)
-
-    # Remove non-ASCII characters
+    # Removing non-ASCII characters
     tweet = re.sub(r'[^\x00-\x7F]+',' ', tweet)
-
-    # Tokenize the tweet
+    # Tokenizing the tweet
     tokens = tokenizer.tokenize(tweet)
-
-    # Remove stopwords and short words
+    # Removing stopwords and short words
     new_tokens = [token for token in tokens if token not in en_stopwords and len(token) > 2]
-
     return new_tokens
 
 
@@ -90,5 +84,5 @@ def gen_wordclouds(lda_model, num_topics):
         topic_terms = dict(lda_model.show_topic(t, 180))
         wordcloud = WordCloud(width=1200, height=500, background_color='white')
         wordcloud.generate_from_frequencies(topic_terms)
-        wordcloud.to_file(f'static/wordcloud_topic_{t+1}.png')  # Save as static file
+        wordcloud.to_file(f'static/wordcloud_topic_{t+1}.png')  
 
